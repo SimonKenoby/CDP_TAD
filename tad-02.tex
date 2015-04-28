@@ -1,0 +1,57 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{array}
+\usepackage{shortvrb}
+\usepackage{listings}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{graphicx}             % import, scale, and rotate graphics
+\usepackage{subfigure}            % group figures
+\usepackage{alltt}
+\usepackage{url}
+\usepackage{indentfirst}
+\usepackage{eurosym}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\begin{document}
+
+\lstset{language=C, commentstyle={\color{blue}}, frame=single,
+stringstyle=\color{magenta}}
+
+\title{INFO0947: TAD}
+\author{Groupe XX: Simon Lorent, Corentin Jemine}
+\date{Avril/Mai 2015}
+
+\maketitle
+\clearpage
+
+\section{Déclaration du type abstrait}
+	\indent Multi désigne soit le type List, soit le type Array étant donné qu'ils sont basés sur le même TAD. (mettre ce qui suit dans un cadre ce serait super)
+	\\ \textbf{Type:}
+	\\ \indent Multi
+	\\ \textbf{Utilise:}
+	\\ \indent Integer, Boolean, Element \footnote{Element désigne une type générique}
+	\\ \textbf{Opérations:}
+	\\ \indent create\_empty: $\rightarrow$ Multi
+	\\ \indent is\_empty: Multi $\rightarrow$ Boolean
+	\\ \indent count: Multi $\rightarrow$ Integer
+	\\ \indent occurrences: Element x Multi $\rightarrow$ Integer
+	\\ \indent part\_of: Element x Multi $\rightarrow$ Boolean
+	\\ \indent equals: Multi x Multi $\rightarrow$ Boolean
+	\\ \indent union: Multi x Multi $\rightarrow$ Multi
+	\\ \indent add\_to: Element x Multi $\rightarrow$ Multi
+	\\ \indent remove\_from: Element x Multi $\rightarrow$ Multi
+	\\ \textbf{Préconditions:}
+	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element
+	\\ \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
+
+
+\end{document}

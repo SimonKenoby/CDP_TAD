@@ -1,14 +1,16 @@
 #include "seatest.h"
 #include "multiset_array.h"
 
-static void test_placeholder() {
-	assert_int_equal(-2, -2);
+static void test_is_empty() {
+	Array *array = create_empty();
+	assert_true(is_empty(array));
+	free(array);
 }
 
 static void test_fixture() {
 	test_fixture_start();
 
-	run_test(test_placeholder);
+	run_test(test_is_empty);
 
 	test_fixture_end();
 }

@@ -68,3 +68,20 @@ bool part_of(list *L, void *element, bool (*compare(const void *, const void *))
 	return FALSE;
 }
 
+bool equals(list *L1, list *L2, bool (*compare(const void *, const void *)))
+{
+	assert(L1 && L2);
+	cell current = L1;
+	if(count(L1) != count(L2))
+		return FALSE;
+	else
+	{
+		while(current)
+		{
+			if(occurrences(L1, current->data, compare) != occurrences(L2, current->data, compare))
+				return FALSE;
+			current = current->next;
+		}
+	}
+	return TRUE;
+}

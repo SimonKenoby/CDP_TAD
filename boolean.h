@@ -3,6 +3,6 @@
 
 #define TRUE 1;
 #define FALSE 0;
-typedef bool;
+typedef int bool;
 
 #endif

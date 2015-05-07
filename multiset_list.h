@@ -10,7 +10,7 @@ list *create_empty();
 
 bool is_empty(list *L);
 
-int count(list *L, void *element ,bool (*compare(const void *, const void *)));
+int count(list *L);
 
 int occurrences(list *L, void *element, bool (*compare(const void *, const void *)));
 

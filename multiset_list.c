@@ -29,15 +29,28 @@ bool is_empty(list *L)
 		return TRUE;
 }
 
-int count(list *L, void *element, bool (*compare(const void *, const void *)))
+int count(list *L)
 {
 	assert(L);
-	cell current = L;
+	cell *current = L;
 	int count = 0;
 	while(current)
 	{
+		++count;
+		current = current->next;
+	}
+	return count;
+}
+
+int occurrences(list *L, void *element, bool (*compare(const void *, const void *)))
+{
+	assert(L);
+	cell current = L;
+	int occurrences = 0;
+	while(current)
+	{
 		if(compare(current->data, element))
-			count++;
+			++occurrences;
 		current = current->next;
 	}
 	return count;

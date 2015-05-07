@@ -25,7 +25,8 @@ int count(Array *array) {
 	return array->count;
 }
 
-int occurrences(void* element, Array *array, bool(*compare) (const void *, const void *)) {
+int occurrences(void* element, Array *array, bool(*compare) \
+	(const void *, const void *)) {
 	assert(array);
 	int occurrences = 0;
 	for (int i = 0; i < array->count; i++)
@@ -34,7 +35,8 @@ int occurrences(void* element, Array *array, bool(*compare) (const void *, const
 	return occurrences;
 }
 
-bool part_of(void* element, Array *array, bool(*compare) (const void *, const void *)) {
+bool part_of(void* element, Array *array, bool(*compare) \
+	(const void *, const void *)) {
 	assert(array);
 	for (int i = 0; i < array->count; i++)
 		if (compare(element, array->elements[i]))
@@ -42,12 +44,14 @@ bool part_of(void* element, Array *array, bool(*compare) (const void *, const vo
 	return FALSE;
 }
 
-bool equals(Array *array1, Array *array2, bool(*compare) (const void *, const void *)) {
+bool equals(Array *array1, Array *array2, bool(*compare) \
+	(const void *, const void *)) {
 	assert(array1 && array2);
 	if (array1->count != array2->count)
 		return FALSE;
 	for (int i = 0; i < array1->count; i++)
-		if (occurrences(array1->elements[i], array1, compare) != occurrences(array1->elements[i], array2, compare))
+		if (occurrences(array1->elements[i], array1, compare) != \
+			occurrences(array1->elements[i], array2, compare))
 			return FALSE;
 	return TRUE;
 }
@@ -55,10 +59,13 @@ bool equals(Array *array1, Array *array2, bool(*compare) (const void *, const vo
 Array *join(Array *array1, Array *array2) {
 	assert(array1 && array2);
 	Array* r_array = create_empty();
+	r_array->count = array1->count + array2->count;
+	r_array->elements = malloc(sizeof(void*)*(r_array->count));
+	assert(r_array->elements);
 	for (int i = 0; i < array1->count; i++)
-		r_array = add_to(array1->elements[i], r_array);
+		r_array->elements[i] = array1->elements[i];
 	for (int i = 0; i < array2->count; i++)
-		r_array = add_to(array2->elements[i], r_array);
+		r_array->elements[array1->count + i] = array2->elements[i];
 	return r_array;
 }
 
@@ -76,7 +83,8 @@ Array *add_to(void* element, Array *array) {
 	return r_array;
 }
 
-Array *remove_from(void* element, Array *array, bool(*compare) (const void *, const void *)) {
+Array *remove_from(void* element, Array *array, bool(*compare) \
+	(const void *, const void *)) {
 	assert(array);
 	if (!array->count)												//In case of empty array, the array is returned
 		return array;

@@ -126,11 +126,21 @@ list *add_to(list *L, void *element)
 list remove_from(list *L, void *element, bool (*compare(const void *, const void *)))
 {
 	assert(element);
-	cell *current = L;
+	cell *current = L, tmp = NULL;
 	if(is_empty(L))
 		return L;
 	else
 	{
-		while(current->next)
+		while(current)
+		{
+			if(compare(current->data, element))
+			{
+				tmp->next = current->next;
+				free(current);
+			}
+			tmp = current;
+			current = current->next;
+		}
 	}
+	return L;
 }

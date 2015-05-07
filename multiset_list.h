@@ -4,7 +4,9 @@
 #include "boolean.h"
 #include <stdlib.h>
 
+
 typedef struct list_t list;
+typedef struct list_t cell;
 
 list *create_empty();
 
@@ -23,3 +25,5 @@ list *join(list *L1, list *L2);
 list *add_to(list *L, void *element);
 
 list remove_from(list *L, void *element);
+
+#endif 

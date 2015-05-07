@@ -1,18 +1,17 @@
-#include "multiset.h"
+#include "multiset_list.h"
 #include "seatest.h"
 
 #include <assert.h>
 #include <stdlib.h>
 
-struct list
+struct list_t
 {
 	void *data;
 	struct list_t *next;
 };
 
-typedef struct list_t cell
 
-list *create_empty()
+list *create_empty(void)
 {
 	list *L = malloc(sizeof(list));
 	assert(L);
@@ -24,7 +23,9 @@ bool is_empty(list *L)
 {
 	assert(L);
 	if(L->data)
+	{
 		return FALSE;
+	}
 	else
 		return TRUE;
 }
@@ -33,19 +34,19 @@ int count(list *L)
 {
 	assert(L);
 	cell *current = L;
-	int count = 0;
+	int element_count = 0;
 	while(current)
 	{
-		++count;
+		++element_count;
 		current = current->next;
 	}
-	return count;
+	return element_count;
 }
 
 int occurrences(list *L, void *element, bool (*compare(const void *, const void *)))
 {
 	assert(L);
-	cell current = L;
+	cell *current = L;
 	int occurrences = 0;
 	while(current)
 	{
@@ -53,16 +54,16 @@ int occurrences(list *L, void *element, bool (*compare(const void *, const void 
 			++occurrences;
 		current = current->next;
 	}
-	return count;
+	return occurrences;
 }
 
 bool part_of(list *L, void *element, bool (*compare(const void *, const void *)))
 {
 	assert(L && element);
-	cell *current = L;
+	cell *current = (cell *)L;
 	while(current)
 	{
-		if(compare->data, element)
+		if(compare(current->data, element))
 			return TRUE;
 	}
 	return FALSE;
@@ -71,9 +72,11 @@ bool part_of(list *L, void *element, bool (*compare(const void *, const void *))
 bool equals(list *L1, list *L2, bool (*compare(const void *, const void *)))
 {
 	assert(L1 && L2);
-	cell current = L1;
+	cell *current = (cell *)L1;
 	if(count(L1) != count(L2))
+	{
 		return FALSE;
+	}
 	else
 	{
 		while(current)

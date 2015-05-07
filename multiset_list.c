@@ -21,8 +21,7 @@ list *create_empty(void)
 
 bool is_empty(list *L)
 {
-	assert(L);
-	if(L->data)
+	if(!L)
 	{
 		return FALSE;
 	}
@@ -32,7 +31,6 @@ bool is_empty(list *L)
 
 int count(list *L)
 {
-	assert(L);
 	cell *current = L;
 	int element_count = 0;
 	while(current)
@@ -45,7 +43,6 @@ int count(list *L)
 
 int occurrences(list *L, void *element, bool (*compare(const void *, const void *)))
 {
-	assert(L);
 	cell *current = L;
 	int occurrences = 0;
 	while(current)
@@ -59,8 +56,10 @@ int occurrences(list *L, void *element, bool (*compare(const void *, const void 
 
 bool part_of(list *L, void *element, bool (*compare(const void *, const void *)))
 {
-	assert(L && element);
-	cell *current = (cell *)L;
+	assert(element);
+	if(is_empty(L))
+		return FALSE;
+	cell *current = L;
 	while(current)
 	{
 		if(compare(current->data, element))
@@ -71,8 +70,7 @@ bool part_of(list *L, void *element, bool (*compare(const void *, const void *))
 
 bool equals(list *L1, list *L2, bool (*compare(const void *, const void *)))
 {
-	assert(L1 && L2);
-	cell *current = (cell *)L1;
+	cell *current = L1;
 	if(count(L1) != count(L2))
 	{
 		return FALSE;
@@ -87,4 +85,52 @@ bool equals(list *L1, list *L2, bool (*compare(const void *, const void *)))
 		}
 	}
 	return TRUE;
+}
+
+list *join(list *L1, list *L2)
+{
+	if(is_empty(L1))
+		return L2;
+	else if(is_empty(L2))
+		return L1;
+
+	list *joined_list = malloc(sizeof(list));
+	assert(joined_list);
+	cell *current = L1;
+	while(current)
+	{
+		joined_list = add_to(joined_list, current->data);
+		current = current->next;
+	}
+	current = L2;
+	while(current)
+	{
+		joined_list = add_to(joined_list, current->data);
+		current = current->next;
+	}
+}
+
+list *add_to(list *L, void *element)
+{
+	assert(element);
+	if(is_empty(L))
+		L = create_empty();
+	L->next = malloc(sizeof(cell));
+	assert(L->next);
+	cell *current = L->next;
+	current->next = NULL;
+	current->data = element;
+	return L;
+}
+
+list remove_from(list *L, void *element, bool (*compare(const void *, const void *)))
+{
+	assert(element);
+	cell *current = L;
+	if(is_empty(L))
+		return L;
+	else
+	{
+		while(current->next)
+	}
 }

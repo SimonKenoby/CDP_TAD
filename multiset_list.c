@@ -55,3 +55,16 @@ int occurrences(list *L, void *element, bool (*compare(const void *, const void 
 	}
 	return count;
 }
+
+bool part_of(list *L, void *element, bool (*compare(const void *, const void *)))
+{
+	assert(L && element);
+	cell *current = L;
+	while(current)
+	{
+		if(compare->data, element)
+			return TRUE;
+	}
+	return FALSE;
+}
+

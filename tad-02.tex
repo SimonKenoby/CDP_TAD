@@ -38,12 +38,12 @@ stringstyle=\color{magenta}}
 	\noindent \textbf{Type:}
 	\\ \indent Multi \footnote{Multi désigne soit le type List, soit le type Array}
 	\\ \textbf{Utilise:}
-	\\ \indent Integer, Boolean, Element \footnote{Element désigne une type générique}
+	\\ \indent Natural, Boolean, Element \footnote{Element désigne une type générique}
 	\\ \textbf{Opérations:}
 	\\ \indent create\_empty: $\rightarrow$ Multi
 	\\ \indent is\_empty: Multi $\rightarrow$ Boolean
-	\\ \indent count: Multi $\rightarrow$ Integer
-	\\ \indent occurrences: Element x Multi $\rightarrow$ Integer
+	\\ \indent count: Multi $\rightarrow$ Natural
+	\\ \indent occurrences: Element x Multi $\rightarrow$ Natural
 	\\ \indent part\_of: Element x Multi $\rightarrow$ Boolean
 	\\ \indent equals: Multi x Multi $\rightarrow$ Boolean
 	\\ \indent join: Multi x Multi $\rightarrow$ Multi
@@ -54,12 +54,17 @@ stringstyle=\color{magenta}}
 	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
 	\\ \indent \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
 	\\ \textbf{Axiomes:}
-	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
+	\\ \indent \textit{Notations:} \#m désigne la nombre d'Elements dans m 
+	\\ \indent \indent \indent \indent \indent m[i] désigne le i-ème Element de m
+	\\ \indent $\forall$ m, m' $\in$ Multi, $\forall$ e $\in$ Element:
 	\\ \indent \indent is\_empty(create\_empty()) = True
 	\\ \indent \indent is\_empty(add\_to(e, m)) = False
-	\\ \indent \indent \underline{\textbf{Si}} is\_empty(m) \underline{\textbf{alors}} count(m) = 0
-	\\ \indent \indent \underline{\textbf{sinon}} count(m) > 0
+	\\ \indent \indent count(m) = \#m
+	\\ \indent \indent occurrences(e, m) = $\sum\limits_{i=1}^{\#m} (m[i] == e)$
+	\\ \indent \indent part\_of(e, m) = (occurrences(e, m) > 0)
+	\\ \indent \indent equals(m, m') = ($\forall e_{0} \in$ Element, occurrences($e_{0}$, m) == occurrences($e_{0}$, m'))
 	
+	\clearpage
 	\subsection{Jusitification des axiomes}
 
 \end{document}

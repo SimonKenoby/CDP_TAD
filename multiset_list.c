@@ -13,24 +13,27 @@ struct list_t
 
 list *create_empty(void)
 {
-	list *L = malloc(sizeof(list));
-	assert(L);
-	L->next = NULL;
-	return L;
+	return NULL;
 }
 
 bool is_empty(list *L)
 {
 	if(!L)
 	{
-		return FALSE;
+		return TRUE;
 	}
 	else
-		return TRUE;
+	{
+		return FALSE;
+	}
 }
 
 int count(list *L)
 {
+	if(is_empty(L))
+	{
+		return 0;
+	}
 	cell *current = L;
 	int element_count = 0;
 	while(current)
@@ -43,6 +46,8 @@ int count(list *L)
 
 int occurrences(list *L, void *element, bool (*compare)(const void *, const void *))
 {
+	if(is_empty(L))
+		return 0;
 	cell *current = L;
 	int occurrences = 0;
 	while(current)
@@ -64,6 +69,7 @@ bool part_of(list *L, void *element, bool (*compare)(const void *, const void *)
 	{
 		if(compare(current->data, element))
 			return TRUE;
+		current = current->next;
 	}
 	return FALSE;
 }
@@ -94,8 +100,7 @@ list *join(list *L1, list *L2)
 	else if(is_empty(L2))
 		return L1;
 
-	list *joined_list = malloc(sizeof(list));
-	assert(joined_list);
+	list *joined_list = create_empty();
 	cell *current = L1;
 	while(current)
 	{
@@ -108,27 +113,47 @@ list *join(list *L1, list *L2)
 		joined_list = add_to(joined_list, current->data);
 		current = current->next;
 	}
+	return joined_list;
 }
 
 list *add_to(list *L, void *element)
 {
 	assert(element);
+	cell *current = L;
 	if(is_empty(L))
-		L = create_empty();
-	L->next = malloc(sizeof(cell));
-	assert(L->next);
-	cell *current = L->next;
-	current->next = NULL;
-	current->data = element;
-	return L;
+	{
+		L = malloc(sizeof(cell));
+		assert(L);
+		L->next = NULL;
+		L->data = element;
+		return L;
+	}
+	else
+	{
+		while(current->next)
+		{
+			current = current->next;
+		}
+		current->next = malloc(sizeof(cell));
+		assert(L->next);
+		current = current->next;
+		current->next = NULL;
+		current->data = element;
+		return L;
+	}
 }
 
-list remove_from(list *L, void *element, bool (*compare)(const void *, const void *))
+list *remove_from(list *L, void *element, bool (*compare)(const void *, const void *))
 {
 	assert(element);
-	cell *current = L, tmp = NULL;
+	cell *current = L->next, *tmp = L;
 	if(is_empty(L))
 		return L;
+	else if(!tmp->next && compare(tmp->data, element))
+		{
+			free(tmp);
+			return NULL;
+		}
 	else
 	{
 		while(current)
@@ -138,9 +163,9 @@ list remove_from(list *L, void *element, bool (*compare)(const void *, const voi
 				tmp->next = current->next;
 				free(current);
 			}
-			tmp = current;
-			current = current->next;
+			tmp = tmp->next;
+			current = tmp->next;
 		}
+		return L;
 	}
-	return L;
 }

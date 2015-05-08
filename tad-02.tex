@@ -33,10 +33,10 @@ stringstyle=\color{magenta}}
 \maketitle
 \clearpage
 
-\section{Déclaration du type abstrait}
-	\indent Multi désigne soit le type List, soit le type Array étant donné qu'ils sont basés sur le même TAD. (mettre ce qui suit dans un cadre ce serait super)
-	\\ \textbf{Type:}
-	\\ \indent Multi
+\section{Type abstrait}
+	\subsection{Signature}
+	\noindent \textbf{Type:}
+	\\ \indent Multi \footnote{Multi désigne soit le type List, soit le type Array}
 	\\ \textbf{Utilise:}
 	\\ \indent Integer, Boolean, Element \footnote{Element désigne une type générique}
 	\\ \textbf{Opérations:}
@@ -49,9 +49,17 @@ stringstyle=\color{magenta}}
 	\\ \indent join: Multi x Multi $\rightarrow$ Multi
 	\\ \indent add\_to: Element x Multi $\rightarrow$ Multi
 	\\ \indent remove\_from: Element x Multi $\rightarrow$ Multi
-	\\ \textbf{Préconditions:}
-	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element
-	\\ \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
-
+	\subsection{Sémantique}
+	\noindent \textbf{Préconditions:}
+	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
+	\\ \indent \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
+	\\ \textbf{Axiomes:}
+	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
+	\\ \indent \indent is\_empty(create\_empty()) = True
+	\\ \indent \indent is\_empty(add\_to(e, m)) = False
+	\\ \indent \indent \underline{\textbf{Si}} is\_empty(m) \underline{\textbf{alors}} count(m) = 0
+	\\ \indent \indent \underline{\textbf{sinon}} count(m) > 0
+	
+	\subsection{Jusitification des axiomes}
 
 \end{document}

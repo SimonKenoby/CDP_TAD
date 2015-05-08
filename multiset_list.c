@@ -41,7 +41,7 @@ int count(list *L)
 	return element_count;
 }
 
-int occurrences(list *L, void *element, bool (*compare(const void *, const void *)))
+int occurrences(list *L, void *element, bool (*compare)(const void *, const void *))
 {
 	cell *current = L;
 	int occurrences = 0;
@@ -54,7 +54,7 @@ int occurrences(list *L, void *element, bool (*compare(const void *, const void 
 	return occurrences;
 }
 
-bool part_of(list *L, void *element, bool (*compare(const void *, const void *)))
+bool part_of(list *L, void *element, bool (*compare)(const void *, const void *))
 {
 	assert(element);
 	if(is_empty(L))
@@ -68,7 +68,7 @@ bool part_of(list *L, void *element, bool (*compare(const void *, const void *))
 	return FALSE;
 }
 
-bool equals(list *L1, list *L2, bool (*compare(const void *, const void *)))
+bool equals(list *L1, list *L2, bool (*compare)(const void *, const void *))
 {
 	cell *current = L1;
 	if(count(L1) != count(L2))
@@ -123,7 +123,7 @@ list *add_to(list *L, void *element)
 	return L;
 }
 
-list remove_from(list *L, void *element, bool (*compare(const void *, const void *)))
+list remove_from(list *L, void *element, bool (*compare)(const void *, const void *))
 {
 	assert(element);
 	cell *current = L, tmp = NULL;

@@ -17,6 +17,7 @@
 \usepackage{indentfirst}
 \usepackage{eurosym}
 \usepackage{listings}
+\usepackage{setspace}
 \usepackage{color}
 
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -27,7 +28,7 @@
 stringstyle=\color{magenta}}
 
 \title{INFO0947: TAD}
-\author{Groupe XX: Simon Lorent, Corentin Jemine}
+\author{Groupe 02: Simon Lorent, Corentin Jemine}
 \date{Avril/Mai 2015}
 
 \maketitle
@@ -54,25 +55,27 @@ stringstyle=\color{magenta}}
 	\\ \indent remove\_from: Element x Multi $\rightarrow$ Multi
 	\subsection{Sémantique}
 	\noindent \textbf{Préconditions:}
-	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
-	\\ \indent \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
-	\\ \textbf{Axiomes:}
+	\\ \indent Aucune \footnote{remove\_from est définit sur un Multi vide mais n'aura aucun effet}
+	\\ \textbf{Axiomes}:
 	\\ \indent \textit{Notations:} \#m désigne le nombre d'Elements dans m 
 	\\ \indent \indent \indent \indent \indent m[i] désigne le i-ème Element de m
-	\\ \indent $\forall$ m, m' $\in$ Multi, $\forall$ e $\in$ Element:
+	\\ \indent \textit{Remarque:} le signe d'égalité entre 2 Multis suit la définition de la fonction equals()
+	\begin{spacing}{1.5}
+	\indent $\forall$ m, m' $\in$ Multi, $\forall$ e $\in$ Element:
 	\\ \indent \indent is\_empty(create\_empty()) = True
-	\\ \indent \indent is\_empty(add\_to(e, m)) = False
 	\\ \indent \indent count(m) = \#m
-	\\ \indent \indent occurrences(e, m) = $\sum\limits_{i=1}^{\#m}$(m[i] == e)
+	\\ \indent \indent occurrences(e, m) = $\sum\limits_{i=1}^{count(m)}$(m[i] == e)
 	\\ \indent \indent part\_of(e, m) = (occurrences(e, m) > 0)
-	\\ \indent \indent equals(m, m') = (\#m == \#m') \&\& $\prod\limits_{i=1}^{\#m}$((occurrences(m[i], m) == occurrences(m[i], m'))
-	\\ \indent \indent occurrences(e, join(m, m')) = occurrences(e, m) + occurrences(e, m')
-	\\ \indent \indent occurrences(e, add\_to(e, m)) = occurrences(e, m) + 1
-	\\ \indent \indent \textbf{\underline{Si}} part\_of(e, m) \textbf{\underline{alors}} occurrences(e, remove\_from(e, m)) = occurrences(e, m) - 1
-	\\ \indent \indent \textbf{\underline{Sinon}} equals(m, remove\_from(e, m))
-	
-	
+	\\ \indent \indent equals(m, m') = (count(m) == count(m')) \&\& 
+	\\ \indent \indent \indent \indent $\prod\limits_{i=1}^{count(m)}$((occurrences(m[i], m) == occurrences(m[i], m'))
 	\clearpage
+	\indent \indent occurrences(e, join(m, m')) = occurrences(e, m) + occurrences(e, m')
+	\\ \indent \indent add\_to(e, m) = join(m, add\_to(e, create\_empty()))
+	\\ \indent \indent count(add\_to(e, m)) = count(m) + 1
+	\\ \indent \indent is\_empty(add\_to(e, m)) = False	
+	\\ \indent \indent \textbf{\underline{Si}} part\_of(e, m) \textbf{\underline{alors}} m = remove\_from(e, add\_to(e, m))
+	\\ \indent \indent \textbf{\underline{Si}} $\neg$ part\_of(e, m) \textbf{\underline{alors}} equals(m, remove\_from(e, m))
+	\end{spacing}
 	\subsection{Jusitification des axiomes}
 
 \end{document}

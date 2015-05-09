@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.3)  9 MAY 2015 12:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.3)  9 MAY 2015 15:02
 entering extended mode
 **tad-02.tex
 
@@ -462,6 +462,9 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box30
 )
+("D:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 ("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -472,21 +475,21 @@ Package color Info: Driver file: pdftex.def on input line 130.
 )
 ("D:\Users\Corentin\Documents\Professionnel\Programmation\Project3 CdP\CDP_TAD\
 tad-02.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Info: Redefining \degres on input line 24.
-LaTeX Info: Redefining \dots on input line 24.
-LaTeX Info: Redefining \up on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Info: Redefining \degres on input line 25.
+LaTeX Info: Redefining \dots on input line 25.
+LaTeX Info: Redefining \up on input line 25.
 \c@lstlisting=\count115
  ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -507,12 +510,12 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -526,10 +529,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("D:\Users\Corentin\Documents\Professionnel\Programmation\Project3 CdP\CDP_TAD\
 tad-02.aux") ) 
 Here is how much of TeX's memory you used:
- 4758 strings out of 493921
- 62269 string characters out of 3147274
- 140651 words of memory out of 3000000
- 7963 multiletter control sequences out of 15000+200000
+ 4790 strings out of 493921
+ 62842 string characters out of 3147274
+ 140917 words of memory out of 3000000
+ 7991 multiletter control sequences out of 15000+200000
  17454 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,6n,49p,379b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -546,7 +549,7 @@ pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><D:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><D:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1728.pfb><D:/Program Files/MiKTe
 X 2.9/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on tad-02.pdf (3 pages, 184355 bytes).
+Output written on tad-02.pdf (3 pages, 205448 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

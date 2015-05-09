@@ -15,9 +15,7 @@ Array *create_empty(void) {
 
 bool is_empty(Array *array) {
    assert(array);
-   if (array->count)
-      return FALSE;
-   return TRUE;
+   return !array->count;
 }
 
 int count(Array *array) {

@@ -53,6 +53,7 @@ stringstyle=\color{magenta}}
 	\\ \indent join: Multi x Multi $\rightarrow$ Multi
 	\\ \indent add\_to: Element x Multi $\rightarrow$ Multi
 	\\ \indent remove\_from: Element x Multi $\rightarrow$ Multi
+	
 	\subsection{Sémantique}
 	\noindent \textbf{Préconditions:}
 	\\ \indent Aucune \footnote{remove\_from est définit sur un Multi vide mais n'aura aucun effet}
@@ -76,6 +77,26 @@ stringstyle=\color{magenta}}
 	\\ \indent \indent \textbf{\underline{Si}} part\_of(e, m) \textbf{\underline{alors}} m = remove\_from(e, add\_to(e, m))
 	\\ \indent \indent \textbf{\underline{Si}} $\neg$ part\_of(e, m) \textbf{\underline{alors}} equals(m, remove\_from(e, m))
 	\end{spacing}
+	
 	\subsection{Jusitification des axiomes}
-
+	\color{blue} TODO \color{black}
+	
+	\clearpage
+\section{Description des structures}
+	Multi est une structure de donnée de type multi-ensemble générique: elle peut contenir un ensemble de n'importe quelle données et peut contenir plusieurs fois une même donnée. Dans notre projet nous avons utilisé des pointeurs sur \texttt{void} pour être conformes à la généricité. Notre structure Multi ne tient pas compte de l'ordre des éléments: des ensembles sont considérés égaux s'ils présentent tous deux les mêmes éléments le même nombre de fois. Elle est aussi implémentée afin de ne pas retourner d'erreur, si par exemple un utilisateur tente d'utiliser \texttt{remove\_from()} sur un ensemble qui ne contient pas l'élément spécifié, alors rien ne se passe.
+	\subsection{Array}
+		La structure Array contient deux champs: un tableau de type \texttt{void*} qui va contenir l'entièrté des éléments ajoutés à l'Array correspondant ainsi que la taille de ce tableau sous forme d'un entier. Ces champs sont étroitement liés car la taille réelle du tableau doit toujours correspondre à la taille indiquée dans la structure.
+	\subsection{List}
+		\color{blue} indique une description rapide de ta structure \color{black}
+	
+\section{Avantages et inconvénients}
+	Pour chaque ajout ou retrait d'un élément dans un multi-ensemble de type Array, un nouveau tableau est alloué afin de convenir à la nouvelle taille. C'est un processus coûteux aussi bien en termes de temps d'exécution qu'en termes de mémoire car lors de l'allocation de ce nouveau tableau, le tableau courant reste présent en mémoire afin de pouvoir être recopié dans le nouveau tableau. C'est pendant ce procédé uniquement qu'un Array va occuper la même taille qu'une List contenant des éléments identiques, le reste du temps un Array occupera la moitié de l'espace mémoire que nécessite une List identique. En effet, chaque cellule d'une liste chaînée va contenir un pointeur vers la cellule suivante soit le double de mémoire nécessaire pour stocker un seul élément par rapport à un tableau. Par contre, redimensionner une List pour y ajouter ou retirer des éléments est un processus peu coûteux car il suffit de rajouter ou de retirer une seule cellule pour ces opérations. Et finalement, la taille d'un Array est accessible directement dans la structure alors que la taille d'une List nécéssite un parcours complet de la List afin d'être obtenue.
+	
+	\clearpage
+\section {Fonctions}
+	\subsection{Array}
+	
+	\subsection{List}
+	\color{blue} bonne merde \color{black}
+	
 \end{document}

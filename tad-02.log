@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.3)  8 MAY 2015 14:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.3)  9 MAY 2015 12:04
 entering extended mode
 **tad-02.tex
 
@@ -528,29 +528,27 @@ tad-02.aux") )
 Here is how much of TeX's memory you used:
  4758 strings out of 493921
  62269 string characters out of 3147274
- 139651 words of memory out of 3000000
+ 140651 words of memory out of 3000000
  7963 multiletter control sequences out of 15000+200000
  17454 words of font info for 48 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,49p,267b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,6n,49p,379b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1
 .enc}<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public
-/cm-super/sfbx1095.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super
-/sfbx1200.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440
-.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><D:/
-Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><D:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><D:/Program Files/MiKT
-eX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/cm-super/sfrm1728.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
-/public/cm-super/sfti1095.pfb>
-Output written on tad-02.pdf (3 pages, 196282 bytes).
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/f
+onts/type1/public/cm-super/sfbx1095.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
+1/public/cm-super/sfbx1200.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfbx1440.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/
+sfrm0800.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.
+pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><D:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><D:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1728.pfb><D:/Program Files/MiKTe
+X 2.9/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on tad-02.pdf (3 pages, 184355 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

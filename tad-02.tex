@@ -33,7 +33,10 @@ stringstyle=\color{magenta}}
 \maketitle
 \clearpage
 
-\section{Type abstrait}
+\section{Introduction}
+	Dans ce troisième projet nous avons définit deux structures de données, List et Array, pour lesquelles nous avons implémenté des fonctions de base. Ces fonctions sont des constructeurs, des observateurs ou des transformateurs. Nous nous pencherons sur une définition théorique de ces structures ainsi que leurs avantages et inconvénients respectifs.
+
+\section{Définition du type abstrait}
 	\subsection{Signature}
 	\noindent \textbf{Type:}
 	\\ \indent Multi \footnote{Multi désigne soit le type List, soit le type Array}
@@ -54,15 +57,20 @@ stringstyle=\color{magenta}}
 	\\ \indent $\forall$ m $\in$ Multi, $\forall$ e $\in$ Element:
 	\\ \indent \indent remove\_from(e, m) est défini ssi is\_empty(m) = False
 	\\ \textbf{Axiomes:}
-	\\ \indent \textit{Notations:} \#m désigne la nombre d'Elements dans m 
+	\\ \indent \textit{Notations:} \#m désigne le nombre d'Elements dans m 
 	\\ \indent \indent \indent \indent \indent m[i] désigne le i-ème Element de m
 	\\ \indent $\forall$ m, m' $\in$ Multi, $\forall$ e $\in$ Element:
 	\\ \indent \indent is\_empty(create\_empty()) = True
 	\\ \indent \indent is\_empty(add\_to(e, m)) = False
 	\\ \indent \indent count(m) = \#m
-	\\ \indent \indent occurrences(e, m) = $\sum\limits_{i=1}^{\#m} (m[i] == e)$
+	\\ \indent \indent occurrences(e, m) = $\sum\limits_{i=1}^{\#m}$(m[i] == e)
 	\\ \indent \indent part\_of(e, m) = (occurrences(e, m) > 0)
-	\\ \indent \indent equals(m, m') = ($\forall e_{0} \in$ Element, occurrences($e_{0}$, m) == occurrences($e_{0}$, m'))
+	\\ \indent \indent equals(m, m') = (\#m == \#m') \&\& $\prod\limits_{i=1}^{\#m}$((occurrences(m[i], m) == occurrences(m[i], m'))
+	\\ \indent \indent occurrences(e, join(m, m')) = occurrences(e, m) + occurrences(e, m')
+	\\ \indent \indent occurrences(e, add\_to(e, m)) = occurrences(e, m) + 1
+	\\ \indent \indent \textbf{\underline{Si}} part\_of(e, m) \textbf{\underline{alors}} occurrences(e, remove\_from(e, m)) = occurrences(e, m) - 1
+	\\ \indent \indent \textbf{\underline{Sinon}} equals(m, remove\_from(e, m))
+	
 	
 	\clearpage
 	\subsection{Jusitification des axiomes}

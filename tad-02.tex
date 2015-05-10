@@ -95,7 +95,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\clearpage
 \section {Fonctions}
-	Lors du calcul de complexité algorithmique, nous avons omis tous les \texttt{assert()} présents dans le code pour deux raisons: d'abord parce que les assertions ne sont souvent que la traduction en code des préconditions (redondance) et ensuite parce que la complexité de \texttt{assert()} est de complexité $O(1)$ donc négligeable en présence d'autres lignes de code.
+	Lors du calcul de complexité algorithmique, nous avons omis tous les \texttt{assert()} présents dans le code pour deux raisons: d'abord parce que les assertions ne sont souvent que la traduction en code des préconditions (redondance) et ensuite parce que \texttt{assert()} est de complexité $O(1)$ donc négligeable en présence d'autres lignes de code.
 	\subsection{Array}
 	\subsubsection{create\_empty}
 	\begin{lstlisting}[mathescape]
@@ -140,7 +140,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: $\color{blue}\sum\limits_{i=1}^{\#array}$(array[i] $\color{blue}==$ element), array = array$\color{blue}_{0}$,
+	* @post: $\color{blue}\sum\limits_{i=0}^{\#array - 1}$(array[i] $\color{blue}==$ element), array = array$\color{blue}_{0}$,
 	*		element = element$\color{blue}_{0}$
 	*/
 	int occurrences(void* element, Array *array, bool(*compare)
@@ -158,7 +158,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: ($\color{blue}\exists i$, $\color{blue}0 \leq i \leq \#m$:(array[i] $\color{blue}==$ element)), array = array$\color{blue}_{0}$,
+	* @post: ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)), array = array$\color{blue}_{0}$,
 	*		element = element$\color{blue}_{0}$
 	*/
 	bool part_of(void* element, Array *array, bool(*compare)    
@@ -170,6 +170,31 @@ stringstyle=\color{magenta}, escapechar=\#}
 	}
 	\end{lstlisting}
 	Complexité: $O(n)$ - linéaire
+	
+	\clearpage
+	\subsubsection{equals}
+	\begin{lstlisting}[mathescape]
+	/*
+	* @pre: array1 initialis#\color{blue}é#, array2 initialis#\color{blue}é#
+	* @post: (($\color{blue}\#$array1 $\color{blue}==$ $\color{blue}\#$array2) && 
+	*		($\color{blue}\forall i$, $\color{blue}0 \leq i < \#m : (\sum\limits_{j=0}^{\#array1 - 1}$(array1[j] $\color{blue}==$ array1[i]) $\color{blue}== $
+	*		$\color{blue}\sum\limits_{j=0}^{\#array2 - 1}$(array2[j] $\color{blue}==$ array2[i])),
+	*		array1 = array1$\color{blue}_{0}$, array2 = array2$\color{blue}_{0}$
+	*/
+	bool equals(Array *array1, Array *array2, bool(*compare)    
+	(const void *, const void *)) {
+		if (array1->count != array2->count)		#\cpl{$O(1)$}#
+			return FALSE;	#\cpl{$O(1)$}#
+		for (int i = 0; i < array1->count; i++)	#\cpl{$O(n)$}#
+			if (occurrences(array1->elements[i], array1, compare) != \
+			occurrences(array1->elements[i], array2, compare))	#\cpl{$O(n)$}#
+				return FALSE;	#\cpl{$O(1)$}#
+		return TRUE;	#\cpl{$O(1)$}#
+	}
+	\end{lstlisting}
+	Complexité: $O(n^2)$ - quadratique
+	
+	
 	
 	\subsection{List}
 	\color{blue} bonne merde \color{black}

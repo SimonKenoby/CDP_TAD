@@ -48,7 +48,7 @@ bool equals(Array *array1, Array *array2, bool(*compare)
    if (array1->count != array2->count)
       return FALSE;
    for (int i = 0; i < array1->count; i++)
-      if (occurrences(array1->elements[i], array1, compare) !=    
+      if (occurrences(array1->elements[i], array1, compare) != \
          occurrences(array1->elements[i], array2, compare))
          return FALSE;
    return TRUE;

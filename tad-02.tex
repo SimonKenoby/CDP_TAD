@@ -36,7 +36,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 \clearpage
 
 \section{Introduction}
-	Dans ce troisième projet nous avons définit deux structures de données, List et Array, pour lesquelles nous avons implémenté des fonctions de base. Ces fonctions sont des constructeurs, des observateurs ou des transformateurs. Nous nous pencherons sur une définition théorique de ces structures ainsi que leurs avantages et inconvénients respectifs.
+	Dans ce troisième projet nous avons défini deux structures de données, List et Array, pour lesquelles nous avons implémenté des fonctions de base. Ces fonctions sont des constructeurs, des observateurs ou des transformateurs. Nous nous pencherons sur une définition théorique de ces structures ainsi que sur leurs avantages et inconvénients respectifs.
 
 \section{Définition du type abstrait}
 	\subsection{Signature}
@@ -57,7 +57,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\subsection{Sémantique}
 	\noindent \textbf{Préconditions:}
-	\\ \indent Aucune \footnote{remove\_from est définit sur un Multi vide mais n'aura aucun effet}
+	\\ \indent Aucune \footnote{remove\_from est défini sur un Multi vide mais n'aura aucun effet dans ce cas}
 	\\ \textbf{Axiomes}:
 	\\ \indent \textit{Notations:} \#m désigne le nombre d'Elements dans m 
 	\\ \indent \indent \indent \indent \indent m[i] désigne le i-ème Element de m
@@ -84,14 +84,14 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\clearpage
 \section{Description des structures}
-	Multi est une structure de donnée de type multi-ensemble générique: elle peut contenir un ensemble de n'importe quelle données et peut contenir plusieurs fois une même donnée. Dans notre projet nous avons utilisé des pointeurs sur \texttt{void} pour être conformes à la généricité. Notre structure Multi ne tient pas compte de l'ordre des éléments: des ensembles sont considérés égaux s'ils présentent tous deux les mêmes éléments le même nombre de fois. Elle est aussi implémentée afin de ne pas retourner d'erreur, si par exemple un utilisateur tente d'utiliser \texttt{remove\_from()} sur un ensemble qui ne contient pas l'élément spécifié, alors rien ne se passe.
+	Multi est une structure de donnée de type multi-ensemble générique: elle peut contenir un ensemble de n'importe quelle donnée et peut contenir plusieurs fois une même donnée. Dans notre projet nous avons utilisé des pointeurs sur \texttt{void} pour être conformes à la généricité. Notre structure Multi ne tient pas compte de l'ordre des éléments: des ensembles sont considérés égaux s'ils présentent tous deux les mêmes éléments le même nombre de fois. Elle est aussi implémentée afin de ne pas retourner d'erreur, si par exemple un utilisateur tente d'utiliser \texttt{remove\_from()} sur un ensemble qui ne contient pas l'élément spécifié, alors rien ne se passe.
 	\subsection{Array}
-		La structure Array contient deux champs: un tableau de type \texttt{void*} qui va contenir l'entièrté des éléments ajoutés à l'Array correspondant ainsi que la taille de ce tableau sous forme d'un entier. Ces champs sont étroitement liés car la taille réelle du tableau doit toujours correspondre à la taille indiquée dans la structure.
+		La structure Array contient deux champs: un tableau de type \texttt{void*} qui va contenir l'entièreté des éléments ajoutés à l'Array ainsi que la taille de ce tableau sous forme d'un entier. Ces champs sont étroitement liés car la taille réelle du tableau doit toujours correspondre à la taille indiquée dans la structure.
 	\subsection{List}
 		\color{blue} indique une description rapide de ta structure \color{black}
 	
 \section{Avantages et inconvénients}
-	Comparons les deux types. La taille d'un Array est accessible directement dans la structure alors que la taille d'une List nécéssite un parcours complet de la List afin d'être obtenue. Par contre, redimmensionner une List est rapide car il suffit de créer ou de supprimmer une seule cellule alors que pour chaque ajout ou retrait d'un élément dans un Array, un nouveau tableau est alloué afin de convenir à la nouvelle taille. C'est un processus coûteux aussi bien en termes de temps d'exécution qu'en termes de mémoire car lors de l'allocation de ce nouveau tableau, le tableau courant reste présent en mémoire afin de pouvoir être recopié. C'est pendant ce procédé uniquement qu'un Array va occuper la même taille \footnote{Si on néglique le champ indiquant la taille du tableau} qu'une List contenant des éléments identiques, le reste du temps un Array occupera la moitié de l'espace mémoire de cette List. En effet, chaque cellule d'une liste chaînée va contenir un pointeur vers la cellule suivante en plus de la donnée fournie par l'utilisateur soit le double de mémoire nécessaire pour stocker un seul élément par rapport à un tableau.
+	Comparons les deux types. La taille d'un Array est accessible directement dans la structure alors que la taille d'une List nécéssite un parcours complet de la List afin d'être obtenue. Par contre, redimensionner une List est rapide car il suffit de créer ou de supprimer une seule cellule alors que pour chaque ajout ou retrait d'un élément dans un Array, un nouveau tableau est alloué afin de convenir à la nouvelle taille. C'est un processus coûteux aussi bien en termes de temps d'exécution qu'en termes de mémoire car lors de l'allocation de ce nouveau tableau, le tableau courant reste présent en mémoire afin de pouvoir être recopié. C'est pendant ce procédé uniquement qu'un Array va occuper la même taille \footnote{Si on néglique le champ indiquant la taille du tableau} qu'une List contenant des éléments identiques. Le reste du temps un Array occupera la moitié de l'espace mémoire de cette même List. En effet, chaque cellule d'une liste chaînée va contenir un pointeur vers la cellule suivante en plus de la donnée fournie par l'utilisateur, soit le double de mémoire nécessaire pour stocker un seul élément par rapport à un tableau.
 	
 	\clearpage
 \section {Fonctions}
@@ -194,8 +194,78 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\end{lstlisting}
 	Complexité: $O(n^2)$ - quadratique
 	
+	\subsubsection{join}
+	\begin{lstlisting}[mathescape]
+	/*
+	* @pre: array1 initialis#\color{blue}é#, array2 initialis#\color{blue}é#
+	* @post: r_array = array1 $\color{blue}\cup$ array2, $\color{blue}\#$r_array = $\color{blue}\#$array1 + $\color{blue}\#$array2,
+	*		array1 = array1$\color{blue}_{0}$, array2 = array2$\color{blue}_{0}$
+	*/
+	Array *join(Array *array1, Array *array2) {
+		Array* r_array = create_empty();	#\cpl{$O(1)$}#
+		r_array->count = array1->count + array2->count;	#\cpl{$O(1)$}#
+		r_array->elements = malloc(sizeof(void*)*(r_array->count));	#\cpl{$O(1)$}#
+		for (int i = 0; i < array1->count; i++)	#\cpl{$O(n)$}#
+			r_array->elements[i] = array1->elements[i];	#\cpl{$O(1)$}#
+		for (int i = 0; i < array2->count; i++)	#\cpl{$O(n)$}#
+			r_array->elements[array1->count+i] = array2->elements[i];#\cpl{$O(1)$}#
+		return r_array;	#\cpl{$O(1)$}#
+	}
+	\end{lstlisting}
+	Complexité: $O(n)$ - linéaire
 	
+	\clearpage
+	\subsubsection{add\_to}
+	\begin{lstlisting}[mathescape]
+	/*
+	* @pre: array initialis#\color{blue}é#
+	* @post: r_array = array $\color{blue}\cup$ element,
+	*		array = array$\color{blue}_{0}$, element = element$\color{blue}_{0}$
+	*/
+	Array *add_to(void* element, Array *array) {
+		Array *r_array = create_empty();	#\cpl{$O(1)$}#
+		r_array->count = array->count + 1;	#\cpl{$O(1)$}#
+		r_array->elements = malloc(sizeof(void*)*(array->count+1));#\cpl{$O(1)$}#
+		for (int i = 0; i < array->count; i++)	#\cpl{$O(n)$}#
+			r_array->elements[i] = array->elements[i];#\cpl{$O(1)$}#
+		r_array->elements[array->count] = element;#\cpl{$O(1)$}#
+		if (array->count)	#\cpl{$O(1)$}#
+			free(array->elements);	#\cpl{$O(1)$}#
+		return r_array;	#\cpl{$O(1)$}#
+	}
+	\end{lstlisting}
+	Complexité: $O(n)$ - linéaire
+	\subsubsection{remove\_from}
+	\begin{lstlisting}[mathescape]
+	/*
+	* @pre: array initialis#\color{blue}é#
+	* @post: array = r_array $\color{blue}\cup$ 
+	*		(element * ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)),
+	*		array = array$\color{blue}_{0}$, element = element$\color{blue}_{0}$
+	*/
+	Array *remove_from(void* element, Array *array, bool(*compare)    
+	(const void *, const void *)) {
+		if (!array->count)#\cpl{$O(1)$}#
+			return array;#\cpl{$O(1)$}#
+		Array *r_array = create_empty();#\cpl{$O(1)$}#
+		if (occurrences(element, array, compare)) {#\cpl{$O(n)$}#
+			r_array->count = array->count - 1;#\cpl{$O(1)$}#
+			r_array->elements=malloc(sizeof(void*)*(array->count-1));#\cpl{$O(1)$}#
+			bool removed = FALSE;#\cpl{$O(1)$}#
+			for (int i = 0; i < r_array->count; i++){	#\cpl{$O(n)$}#
+				if (!compare(array->elements[i], element) || removed)#\cpl{$O(1)$}#
+					r_array->elements[i] = array->elements[i];#\cpl{$O(1)$}#
+				else
+					removed = TRUE;#\cpl{$O(1)$}#
+			}
+		}
+		else return array;#\cpl{$O(1)$}#
+		return r_array;#\cpl{$O(1)$}#
+	}
+	\end{lstlisting}
+	Complexité: $O(n)$ - linéaire
 	
+	\clearpage
 	\subsection{List}
 	\color{blue} bonne merde \color{black}
 	

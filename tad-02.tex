@@ -88,7 +88,12 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\subsection{Array}
 		La structure Array contient deux champs: un tableau de type \texttt{void*} qui va contenir l'entièreté des éléments ajoutés à l'Array ainsi que la taille de ce tableau sous forme d'un entier. Ces champs sont étroitement liés car la taille réelle du tableau doit toujours correspondre à la taille indiquée dans la structure.
 	\subsection{List}
-		\color{blue} indique une description rapide de ta structure \color{black}
+		La structure list contient deux champs :
+		\begin{itemize}
+			\item un pointeur de type \texttt{void*} qui permet de retenir les données voulues,
+			\item un pointeur de type list qui permet d'obtenir l'adresse de la cellule suivante lors du parcours de la liste. 
+		\end{itemize}
+
 	
 \section{Avantages et inconvénients}
 	Comparons les deux types. La taille d'un Array est accessible directement dans la structure alors que la taille d'une List nécéssite un parcours complet de la List afin d'être obtenue. Par contre, redimensionner une List est rapide car il suffit de créer ou de supprimer une seule cellule alors que pour chaque ajout ou retrait d'un élément dans un Array, un nouveau tableau est alloué afin de convenir à la nouvelle taille. C'est un processus coûteux aussi bien en termes de temps d'exécution qu'en termes de mémoire car lors de l'allocation de ce nouveau tableau, le tableau courant reste présent en mémoire afin de pouvoir être recopié. C'est pendant ce procédé uniquement qu'un Array va occuper la même taille \footnote{Si on néglique le champ indiquant la taille du tableau} qu'une List contenant des éléments identiques. Le reste du temps un Array occupera la moitié de l'espace mémoire de cette même List. En effet, chaque cellule d'une liste chaînée va contenir un pointeur vers la cellule suivante en plus de la donnée fournie par l'utilisateur, soit le double de mémoire nécessaire pour stocker un seul élément par rapport à un tableau.
@@ -267,6 +272,100 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\clearpage
 	\subsection{List}
-	\color{blue} bonne merde \color{black}
 	
+		
+	
+	\subsubsection{create\_empty}
+	
+	\begin{lstlisting}[mathescape]
+	
+	/*
+	* @pre: \
+	* @post: list, L = ()
+	*/
+	
+	list *create_empty(void)
+	{
+   		return NULL;
+	}
+	
+	\end{lstlisting}	
+	
+	\subsubsection{is\_empty}
+	
+	\begin{lstlisting}[mathescape]
+	
+		/*
+		* @pre: \
+		* @post: return TRUE if L = () else return FALSE
+		*/
+		
+		bool is_empty(list *L)
+		{
+   			if(!L)
+   				{
+      				return TRUE;
+   				}
+   				else
+   				{
+      				return FALSE;
+   				}
+		}
+	
+	\end{lstlisting}
+	
+	\subsubsection{count}
+	
+	\begin{lstlisting}[mathescape]
+	
+		/*
+		* @pre: \
+		* @post: return long(L)
+		*/	
+		
+		int count(list *L)
+			{
+   				if(is_empty(L))
+   				{
+      				return 0;
+  			 	}
+   				cell *current = L;
+   				int element_count = 0;
+   				while(current)
+   				{
+      				++element_count;
+      				current = current->next;
+   				}
+   				return element_count;
+			}
+		
+	\end{lstlisting}
+	
+	\subsubsection{occurrences}
+	\begin{lstlisting}[mathescape]
+	
+		/*
+		* @pre: element != NULL $\and$ compare is a fonction to compare element in the list
+		* @post: occurrences = $\color{blue} \#\{data | data = element\}$
+		*/
+		
+		int occurrences($\textbf{list}$ *L,
+							void *element,
+							$\textbf{bool}$ (*compare)(const void *,
+		 					const void *))
+		{
+   			if(is_empty(L))
+      			return 0;
+   			cell *current = L;
+   			int occurrences = 0;
+   			while(current)
+   				{
+      				if(compare(current->data, element))
+         				++occurrences;
+      				current = current->next;
+   				}
+   			return occurrences;
+		}
+	
+	\end{lstlisting}
 \end{document}

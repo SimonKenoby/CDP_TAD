@@ -92,6 +92,8 @@ stringstyle=\color{magenta}, escapechar=\#}
 		\begin{itemize}
 			\item un pointeur de type \texttt{void*} qui permet de retenir les données voulues,
 			\item un pointeur de type list qui permet d'obtenir l'adresse de la cellule suivante lors du parcours de la liste. 
+	\subsubsection{Ajout d'une notation}
+	Si on a la liste $L = (e_0, e_1,..., e_n)$ alors on écrit $e_i(data)$ pour représenter les données présentes dans la cellule i de la liste. 
 		\end{itemize}
 
 	
@@ -345,7 +347,8 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	
 		/*
-		* @pre: element != NULL $\and$ compare is a fonction to compare element in the list
+		* @pre: element != NULL $\and$ compare is 
+		a fonction to compare element in the list
 		* @post: occurrences = $\color{blue} \#\{data | data = element\}$
 		*/
 		
@@ -365,6 +368,34 @@ stringstyle=\color{magenta}, escapechar=\#}
       				current = current->next;
    				}
    			return occurrences;
+		}
+	
+	\end{lstlisting}
+	
+	\subsubsection{part\_of}
+	
+	\begin{lstlisting}[mathescape]
+	
+		/*
+		* @pre: L = $ \color{blue}\{e_0,...,e_n\}$ $\wedge$ compare is a fonction to compare element
+		* @post: Return 1 if $ \color{blue} \exists i \mid e_i(data) = element$ else return 0
+		*/
+		
+		bool part_of(list *L, 
+						void *element, 
+						bool (*compare)(const void *, const void *))
+		{
+   			assert(element);
+   			if(is_empty(L))
+      			return FALSE;
+   			cell *current = L;
+   			while(current)
+   			{
+      			if(compare(current->data, element))
+         			return TRUE;
+      			current = current->next;
+   			}
+   		return FALSE;
 		}
 	
 	\end{lstlisting}

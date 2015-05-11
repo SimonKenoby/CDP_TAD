@@ -400,6 +400,72 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\end{lstlisting}
 	
+	\subsubsection{equals}
+	
+	\begin{lstlisting}[mathescape]	
+	
+		/*
+		* @pre: compare is a fonction to compare element  
+		$\color{blue}\wedge L_1 = (e_0,...,e_{i-1})$ $\color{blue}\wedge$ $\color{blue} L_2 = (a_0,...,a_{j-1})$
+		* @post: return 1 if $\color{blue}i = j \wedge \forall i, occurences(e_i, L_1) = occurences(e_i, L_2)$ 
+		else return 0
+		*/
 		
+		bool equals(list *L1, list *L2, 
+						bool (*compare)(const void *, const void *))
+		{
+   			cell *current = L1;
+   			if(count(L1) != count(L2))
+   			{
+      			return FALSE;
+   			}
+   			else
+   			{
+     			 while(current)
+      			{
+         			if(occurrences(L1, current->data, compare) != 
+         			occurrences(L2, current->data, compare))
+            			return FALSE;
+         			current = current->next;
+      			}
+   			}
+  			return TRUE;
+		}
+	
+	\end{lstlisting}
+	
+	\subsubsection{join}
+	
+	\begin{lstlisting}[mathescape]	
+	
+		/*
+		* @pre: $L_1 = (e_0,...e_{i-1}), i \geq 0 \wedge L_2 = (a_0,...,a_{j-1}), j\geq0$
+		* @post: $L_3 = L_1 || L_2$
+		*/
+		
+		list *join(list *L1, list *L2)
+		{
+   			if(is_empty(L1))
+      			return L2;
+   			else if(is_empty(L2))
+      			return L1;
+
+   			list *joined_list = create_empty();
+   			cell *current = L1;
+   			while(current)
+   			{
+      			joined_list = add_to(joined_list, current->data);
+      			current = current->next;
+   			}
+   			current = L2;
+   			while(current)
+   			{
+      			joined_list = add_to(joined_list, current->data);
+      			current = current->next;
+   			}
+   			return joined_list;
+		}	
+	
+	\end{lstlisting}
 	
 \end{document}

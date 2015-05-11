@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.3)  11 MAY 2015 13:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.5.10)  11 MAY 2015 14:00
 entering extended mode
 **tad-02.tex
-
-("D:\Users\Corentin\Documents\Professionnel\Programmation\Project3 CdP\CDP_TAD\
-tad-02.tex"
+(C:\Users\Simon\Documents\GitHub\CDP_TAD\tad-02.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +13,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -32,19 +30,19 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -194,7 +192,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -225,7 +223,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -249,26 +247,26 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("D:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("D:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("D:\Program Files\MiKTeX 2.9\tex\generic\babel\frenchb.ldf"
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\frenchb.ldf"
 Language: frenchb 2009/03/16 v2.3d French support from the babel system
 
-("D:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
@@ -285,13 +283,13 @@ Package babel Info: Making ? an active character on input line 123.
 *************************************
 * Local config file frenchb.cfg used
 *
-("D:\Program Files\MiKTeX 2.9\tex\generic\babel\frenchb.cfg")))
-("D:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
-("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\frenchb.cfg")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen106
 \extrarowheight=\dimen107
@@ -299,10 +297,10 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip43
 \backup@length=\skip44
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\shortvrb.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\shortvrb.sty"
 Package: shortvrb 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count90
 \lst@gtempboxa=\box26
 \lst@token=\toks18
@@ -316,35 +314,35 @@ Package: shortvrb 2010/02/04 v2.1e Standard LaTeX documentation package (FMi)
 \lst@lineno=\count95
 \lst@maxwidth=\dimen111
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count96
 \lst@skipnumbers=\count97
 \lst@framebox=\box27
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2013/08/26 1.5b listings configuration
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen112
 ))
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count98
@@ -385,42 +383,42 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip48
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count110
@@ -428,7 +426,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip49
 \subfigcapskip=\skip50
@@ -444,37 +442,36 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-("D:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
 \subfig@top=\skip53
 \subfig@bottom=\skip54
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box30
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-("D:\Users\Corentin\Documents\Professionnel\Programmation\Project3 CdP\CDP_TAD\
-tad-02.aux")
+(C:\Users\Simon\Documents\GitHub\CDP_TAD\tad-02.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
@@ -491,7 +488,8 @@ LaTeX Info: Redefining \degres on input line 25.
 LaTeX Info: Redefining \dots on input line 25.
 LaTeX Info: Redefining \up on input line 25.
 \c@lstlisting=\count115
- ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen125
@@ -504,168 +502,184 @@ LaTeX Info: Redefining \up on input line 25.
 \MPnumerator=\count120
 \makeMPintoPDFobject=\count121
 \everyMPtoPDFconversion=\toks26
-) ("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2013/08/26 1.5b listings language file
+) (C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-("D:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+(C:\Users\Simon\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 35.
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+{C:/Users/Simon/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ] [3
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 87.
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
 
 
-("D:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
  [5
 
 ]
-Overfull \hbox (8.24185pt too wide) in paragraph at lines 160--161
+Overfull \hbox (8.24185pt too wide) in paragraph at lines 157--158
 [][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (8.24185pt too wide) in paragraph at lines 178--179
+Overfull \hbox (8.24185pt too wide) in paragraph at lines 174--175
 [][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 [6
 
 ]
-Overfull \hbox (2.46107pt too wide) in paragraph at lines 191--192
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.03697pt too wide) in paragraph at lines 201--202
+Overfull \hbox (67.03697pt too wide) in paragraph at lines 197--198
 [][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (27.84023pt too wide) in paragraph at lines 219--220
+Overfull \hbox (27.84023pt too wide) in paragraph at lines 213--214
 [][][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (106.23372pt too wide) in paragraph at lines 220--221
+Overfull \hbox (106.23372pt too wide) in paragraph at lines 214--215
 [][][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (27.84021pt too wide) in paragraph at lines 222--223
+Overfull \hbox (27.84021pt too wide) in paragraph at lines 216--217
 [][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (106.23372pt too wide) in paragraph at lines 224--225
+Overfull \hbox (106.23372pt too wide) in paragraph at lines 218--219
 [][][][][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 [7
 
 ]
-Overfull \hbox (99.70093pt too wide) in paragraph at lines 242--243
+Overfull \hbox (99.70093pt too wide) in paragraph at lines 235--236
 [][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (8.24185pt too wide) in paragraph at lines 244--245
+Overfull \hbox (8.24185pt too wide) in paragraph at lines 237--238
+[][][][][][][][][][][][][][][][][][][] [][] 
+ []
+
+
+Overfull \hbox (106.23372pt too wide) in paragraph at lines 260--261
+[][][][][][][][][][][][][][][][][][] [][] 
+ []
+
+
+Overfull \hbox (8.24185pt too wide) in paragraph at lines 262--263
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] [][] 
+ []
+
+
+Overfull \hbox (99.70093pt too wide) in paragraph at lines 263--264
+[][][][][][][][][][][][][][][][][][][][][][][] [][] 
+ []
+
+
+Overfull \hbox (47.4386pt too wide) in paragraph at lines 264--265
 [][][][][][][][][][][][][][][][][][][] [][] 
  []
 
 [8
 
+] [9
+
 ]
-Overfull \hbox (4.63219pt too wide) in paragraph at lines 257--258
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[]$[][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
- 
+Overfull \hbox (27.84023pt too wide) in paragraph at lines 373--374
+[][][][][][][][][][][][][][][][] [][] 
  []
 
+[10]
+Overfull \hbox (8.24185pt too wide) in paragraph at lines 403--404
+[][][][][][][][][][][][][][][][] [][] 
+ []
 
-Overfull \hbox (106.23372pt too wide) in paragraph at lines 271--272
+[11]
+Overfull \hbox (99.70093pt too wide) in paragraph at lines 471--472
 [][][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (99.70093pt too wide) in paragraph at lines 275--276
-[][][][][][][][][][][][][][][][][][][][][][][] [][] 
+Overfull \hbox (99.70093pt too wide) in paragraph at lines 477--478
+[][][][][][][][][][][][][][][][][][] [][] 
+ []
+
+[12]
+Overfull \hbox (21.30743pt too wide) in paragraph at lines 513--514
+[][][][][][][][][][][][][][][][][] [][] 
  []
 
 
-Overfull \hbox (47.4386pt too wide) in paragraph at lines 276--277
-[][][][][][][][][][][][][][][][][][][] [][] 
+Overfull \hbox (86.63535pt too wide) in paragraph at lines 541--542
+[][][][][][][][][][][][][][][][][][][][][][][][] [][] 
  []
 
-[9
 
-] [10
-
-] [11
-
-]
-Overfull \hbox (115.38493pt too wide) in paragraph at lines 386--387
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (27.84023pt too wide) in paragraph at lines 550--551
+[][][][][][][][][][][][][][][][] [][] 
  []
 
-[12
-
-] [13] [14]
-("D:\Users\Corentin\Documents\Professionnel\Programmation\Project3 CdP\CDP_TAD\
-tad-02.aux") ) 
+[13] [14] (C:\Users\Simon\Documents\GitHub\CDP_TAD\tad-02.aux) ) 
 Here is how much of TeX's memory you used:
- 5234 strings out of 493921
- 67225 string characters out of 3147274
- 168995 words of memory out of 3000000
- 8425 multiletter control sequences out of 15000+200000
+ 5232 strings out of 493921
+ 67336 string characters out of 3147282
+ 171012 words of memory out of 3000000
+ 8423 multiletter control sequences out of 15000+200000
  20091 words of font info for 52 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,6n,49p,1209b,1596s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1
-.enc}<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super
-/sfbx1095.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200
-.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><D:/
-Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><D:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><D:/Program Files/MiKT
-eX 2.9/fonts/type1/public/cm-super/sfrm1095.pfb><D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/cm-super/sfrm1200.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1
-/public/cm-super/sfrm1728.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/c
-m-super/sfti1095.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
-ftt1095.pfb>
-Output written on tad-02.pdf (14 pages, 304283 bytes).
+ 27i,6n,49p,1209b,1586s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Simo
+n\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\
+Users\Simon\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm090
+0.pk> <C:\Users\Simon\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecti1095.pk> <C:\Users\Simon\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecrm0800.pk> <C:\Users\Simon\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Simon\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Simon\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Simon\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Sim
+on\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:
+\Users\Simon\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm17
+28.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb>
+Output written on tad-02.pdf (14 pages, 204340 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 405 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

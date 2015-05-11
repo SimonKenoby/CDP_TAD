@@ -58,7 +58,8 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\subsection{Sémantique}
 	\noindent \textbf{Préconditions:}
 	\\ \indent Aucune \footnote{remove\_from est défini sur un Multi vide mais n'aura aucun effet dans ce cas}
-	\\ \textbf{Axiomes}:
+	\clearpage
+	\noindent \textbf{Axiomes}:
 	\\ \indent \textit{Notations:} \#m désigne le nombre d'Elements dans m 
 	\\ \indent \indent \indent \indent \indent m[i] désigne le i-ème Element de m
 	\\ \indent \textit{Remarque:} le signe d'égalité entre 2 Multis suit la définition de la fonction equals()
@@ -70,8 +71,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\\ \indent \indent part\_of(e, m) = (occurrences(e, m) > 0)
 	\\ \indent \indent equals(m, m') = (count(m) == count(m')) \&\& 
 	\\ \indent \indent \indent \indent $\prod\limits_{i=1}^{count(m)}$((occurrences(m[i], m) == occurrences(m[i], m'))
-	\clearpage
-	\indent \indent occurrences(e, join(m, m')) = occurrences(e, m) + occurrences(e, m')
+	\\ \indent \indent occurrences(e, join(m, m')) = occurrences(e, m) + occurrences(e, m')
 	\\ \indent \indent add\_to(e, m) = join(m, add\_to(e, create\_empty()))
 	\\ \indent \indent count(add\_to(e, m)) = count(m) + 1
 	\\ \indent \indent is\_empty(add\_to(e, m)) = False	
@@ -92,8 +92,6 @@ stringstyle=\color{magenta}, escapechar=\#}
 		\begin{itemize}
 			\item un pointeur de type \texttt{void*} qui permet de retenir les données voulues,
 			\item un pointeur de type list qui permet d'obtenir l'adresse de la cellule suivante lors du parcours de la liste. 
-	\subsubsection{Ajout d'une notation}
-	Si on a la liste $L = (e_0, e_1,..., e_{n-1})$ alors on écrit $e_i(data)$ pour représenter les données présentes dans la cellule i de la liste. 
 		\end{itemize}
 
 	
@@ -102,15 +100,17 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\clearpage
 \section {Fonctions}
-	Lors du calcul de complexité algorithmique, nous avons omis tous les \texttt{assert()} présents dans le code pour deux raisons: d'abord parce que les assertions ne sont souvent que la traduction en code des préconditions (redondance) et ensuite parce que \texttt{assert()} est de complexité $O(1)$ donc négligeable en présence d'autres lignes de code.
+	Lors du calcul de complexité algorithmique, nous avons omis tous les \texttt{assert()} présents dans le code pour deux raisons: d'abord parce que les assertions ne sont souvent que la traduction en code des préconditions (redondance) et ensuite parce que \texttt{assert()} est de complexité $O(1)$ donc négligeable en présence d'autres lignes de code. 
+	
 	\subsection{Array}
 	\subsubsection{create\_empty}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: \
-	* @post: array, $\color{blue}\#$array $\color{blue}=$ 0
+	* @post: return array, $\color{blue}$array $\color{blue}=$ ()
 	*/
-	Array *create_empty(void) {
+	Array *create_empty(void) 
+	{
 		Array *array = malloc(sizeof(Array));	#\cpl{$O(1)$}#
 		array->count = 0;	#\cpl{$O(1)$}#
 		return array;	#\cpl{$O(1)$}#
@@ -122,9 +122,10 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: ($\color{blue}\#$array $\color{blue}==$ 0), array = array$\color{blue}_{0}$
+	* @post: return ($\color{blue}$array $\color{blue}==$ ()), array = array$\color{blue}_{0}$
 	*/
-	bool is_empty(Array *array) {
+	bool is_empty(Array *array) 
+	{
 		return !array->count;	#\cpl{$O(1)$}#
 	}
 	\end{lstlisting}
@@ -134,9 +135,10 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: $\color{blue}\#$array, array = array$\color{blue}_{0}$
+	* @post: return $\color{blue}\#$array, array = array$\color{blue}_{0}$
 	*/
-	int count(Array *array) {
+	int count(Array *array) 
+	{
 		return array->count;	#\cpl{$O(1)$}#
 	}
 	\end{lstlisting}
@@ -147,11 +149,12 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: $\color{blue}\sum\limits_{i=0}^{\#array - 1}$(array[i] $\color{blue}==$ element), array = array$\color{blue}_{0}$,
+	* @post: return $\color{blue}\sum\limits_{i=0}^{\#array - 1}$(array[i] $\color{blue}==$ element), array = array$\color{blue}_{0}$,
 	*		element = element$\color{blue}_{0}$
 	*/
 	int occurrences(void* element, Array *array, bool(*compare)
-	(const void *, const void *)) {
+	(const void *, const void *)) 
+	{
 		int occurrences = 0;	#\cpl{$O(1)$}#
 		for (int i = 0; i < array->count; i++)	#\cpl{$O(n)$}#
 			if (compare(element, array->elements[i]))	#\cpl{$O(1)$}#
@@ -165,11 +168,12 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)), array = array$\color{blue}_{0}$,
-	*		element = element$\color{blue}_{0}$
+	* @post: return ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)), 
+	*		array = array$\color{blue}_{0}$, element = element$\color{blue}_{0}$
 	*/
 	bool part_of(void* element, Array *array, bool(*compare)    
-	(const void *, const void *)) {
+	(const void *, const void *)) 
+	{
 		for (int i = 0; i < array->count; i++)	#\cpl{$O(n)$}#
 			if (compare(element, array->elements[i]))	#\cpl{$O(1)$}#
 				return TRUE;	#\cpl{$O(1)$}#
@@ -183,13 +187,13 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array1 initialis#\color{blue}é#, array2 initialis#\color{blue}é#
-	* @post: (($\color{blue}\#$array1 $\color{blue}==$ $\color{blue}\#$array2) && 
-	*		($\color{blue}\forall i$, $\color{blue}0 \leq i < \#m : (\sum\limits_{j=0}^{\#array1 - 1}$(array1[j] $\color{blue}==$ array1[i]) $\color{blue}== $
-	*		$\color{blue}\sum\limits_{j=0}^{\#array2 - 1}$(array2[j] $\color{blue}==$ array2[i])),
+	* @post: return (($\color{blue}\#$array1 $\color{blue}==$ $\color{blue}\#$array2) $\color{blue}\wedge$ ($\color{blue}\forall i$, $\color{blue}0 \leq i < \#m :$
+	*$\color{blue}\sum\limits_{j=0}^{\#array1 - 1}$(array1[j]$\color{blue}==$array1[i]) $\color{blue}== \sum\limits_{j=0}^{\#array2 - 1}$(array2[j]$\color{blue}==$array2[i]))),
 	*		array1 = array1$\color{blue}_{0}$, array2 = array2$\color{blue}_{0}$
 	*/
 	bool equals(Array *array1, Array *array2, bool(*compare)    
-	(const void *, const void *)) {
+	(const void *, const void *)) 
+	{
 		if (array1->count != array2->count)		#\cpl{$O(1)$}#
 			return FALSE;	#\cpl{$O(1)$}#
 		for (int i = 0; i < array1->count; i++)	#\cpl{$O(n)$}#
@@ -205,10 +209,12 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array1 initialis#\color{blue}é#, array2 initialis#\color{blue}é#
-	* @post: r_array = array1 $\color{blue}\cup$ array2, $\color{blue}\#$r_array = $\color{blue}\#$array1 + $\color{blue}\#$array2,
-	*		array1 = array1$\color{blue}_{0}$, array2 = array2$\color{blue}_{0}$
+	* @post: return r_array, r_array = array1 $\color{blue}\cup$ array2, 
+	*		$\color{blue}\#$r_array = $\color{blue}\#$array1 + $\color{blue}\#$array2, array1 = array1$\color{blue}_{0}$,
+	*		array2 = array2$\color{blue}_{0}$
 	*/
-	Array *join(Array *array1, Array *array2) {
+	Array *join(Array *array1, Array *array2) 
+	{
 		Array* r_array = create_empty();	#\cpl{$O(1)$}#
 		r_array->count = array1->count + array2->count;	#\cpl{$O(1)$}#
 		r_array->elements = malloc(sizeof(void*)*(r_array->count));	#\cpl{$O(1)$}#
@@ -226,10 +232,11 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: r_array = array $\color{blue}\cup$ element,
+	* @post: return r_array, r_array = array $\color{blue}\cup$ element,
 	*		array = array$\color{blue}_{0}$, element = element$\color{blue}_{0}$
 	*/
-	Array *add_to(void* element, Array *array) {
+	Array *add_to(void* element, Array *array) 
+	{
 		Array *r_array = create_empty();	#\cpl{$O(1)$}#
 		r_array->count = array->count + 1;	#\cpl{$O(1)$}#
 		r_array->elements = malloc(sizeof(void*)*(array->count+1));#\cpl{$O(1)$}#
@@ -242,31 +249,37 @@ stringstyle=\color{magenta}, escapechar=\#}
 	}
 	\end{lstlisting}
 	Complexité: $O(n)$ - linéaire
+	\clearpage
 	\subsubsection{remove\_from}
 	\begin{lstlisting}[mathescape]
 	/*
 	* @pre: array initialis#\color{blue}é#
-	* @post: array = r_array $\color{blue}\cup$ 
-	*		(element * ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)),
+	* @post: return r_array, #\color{blue}\underline{Si}# ($\color{blue}\exists i$, $\color{blue}0 \leq i < \#array$:(array[i] $\color{blue}==$ element)) 
+	*		#\color{blue}\underline{alors}# array = r_array $\color{blue}\cup$ element
+	*		#\color{blue}\underline{sinon}# array = r_array
 	*		array = array$\color{blue}_{0}$, element = element$\color{blue}_{0}$
 	*/
 	Array *remove_from(void* element, Array *array, bool(*compare)    
-	(const void *, const void *)) {
+	(const void *, const void *)) 
+	{
 		if (!array->count)#\cpl{$O(1)$}#
 			return array;#\cpl{$O(1)$}#
 		Array *r_array = create_empty();#\cpl{$O(1)$}#
-		if (occurrences(element, array, compare)) {#\cpl{$O(n)$}#
+		if (occurrences(element, array, compare)) #\cpl{$O(n)$}#
+		{
 			r_array->count = array->count - 1;#\cpl{$O(1)$}#
 			r_array->elements=malloc(sizeof(void*)*(array->count-1));#\cpl{$O(1)$}#
 			bool removed = FALSE;#\cpl{$O(1)$}#
-			for (int i = 0; i < r_array->count; i++){	#\cpl{$O(n)$}#
+			for (int i = 0; i < r_array->count; i++)#\cpl{$O(n)$}#
+			{	
 				if (!compare(array->elements[i], element) || removed)#\cpl{$O(1)$}#
 					r_array->elements[i] = array->elements[i];#\cpl{$O(1)$}#
 				else
 					removed = TRUE;#\cpl{$O(1)$}#
 			}
 		}
-		else return array;#\cpl{$O(1)$}#
+		else 
+			return array;#\cpl{$O(1)$}#
 		return r_array;#\cpl{$O(1)$}#
 	}
 	\end{lstlisting}
@@ -275,7 +288,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\clearpage
 	\subsection{List}
 	
-		
+	Si on a la liste $L = (e_0, e_1,..., e_{n-1})$ alors on écrit $e_i(data)$ pour représenter les données présentes dans la cellule i de la liste.
 	
 	\subsubsection{create\_empty}
 	
@@ -283,12 +296,11 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	/*
 	* @pre: \
-	* @post: list, L = ()
+	* @post: return list, L = ()
 	*/
-	
 	list *create_empty(void)
 	{
-   		return NULL;
+		return NULL;
 	}
 	
 	\end{lstlisting}	
@@ -299,47 +311,40 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 		/*
 		* @pre: \
-		* @post: return TRUE if L = () else return FALSE
+		* @post: return (L == ()), L = L$\color{blue}_{0}$
 		*/
-		
 		bool is_empty(list *L)
 		{
-   			if(!L)
-   				{
-      				return TRUE;
-   				}
-   				else
-   				{
-      				return FALSE;
-   				}
+			if(!L)
+				return TRUE;
+			else
+				return FALSE;
 		}
 	
 	\end{lstlisting}
 	
+	\clearpage
 	\subsubsection{count}
 	
 	\begin{lstlisting}[mathescape]
 	
 		/*
 		* @pre: \
-		* @post: return long(L)
+		* @post: return $\color{blue}\#$L, L = L$\color{blue}_{0}$
 		*/	
-		
 		int count(list *L)
+		{
+			if(is_empty(L))
+				return 0;
+			cell *current = L;
+			int element_count = 0;
+			while(current)
 			{
-   				if(is_empty(L))
-   				{
-      				return 0;
-  			 	}
-   				cell *current = L;
-   				int element_count = 0;
-   				while(current)
-   				{
-      				++element_count;
-      				current = current->next;
-   				}
-   				return element_count;
+				++element_count;
+				current = current->next;
 			}
+			return element_count;
+		}
 		
 	\end{lstlisting}
 	
@@ -347,31 +352,28 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]
 	
 		/*
-		* @pre: element != NULL $\and$ compare is 
-		a fonction to compare element in the list
+		* @pre: \
 		* @post: occurrences = $\color{blue} \#\{data | data = element\}$
 		*/
-		
-		int occurrences($\textbf{list}$ *L,
-							void *element,
-							$\textbf{bool}$ (*compare)(const void *,
-		 					const void *))
+		int occurrences($\textbf{List}$ *L, void *element, $\textbf{bool}$ (*compare)
+		(const void *, const void *))
 		{
-   			if(is_empty(L))
-      			return 0;
-   			cell *current = L;
-   			int occurrences = 0;
-   			while(current)
-   				{
-      				if(compare(current->data, element))
-         				++occurrences;
-      				current = current->next;
-   				}
-   			return occurrences;
+			if(is_empty(L))
+				return 0;
+			cell *current = L;
+			int occurrences = 0;
+			while(current)
+			{
+				if(compare(current->data, element))
+					++occurrences;
+				current = current->next;
+			}
+			return occurrences;
 		}
 	
 	\end{lstlisting}
 	
+	\clearpage
 	\subsubsection{part\_of}
 	
 	\begin{lstlisting}[mathescape]
@@ -381,9 +383,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 		* @post: Return 1 if $ \color{blue} \exists i \mid e_i(data) = element$ else return 0
 		*/
 		
-		bool part_of(list *L, 
-						void *element, 
-						bool (*compare)(const void *, const void *))
+		bool part_of(list *L, void *element, bool (*compare)(const void *, const void *))
 		{
    			assert(element);
    			if(is_empty(L))
@@ -416,9 +416,7 @@ stringstyle=\color{magenta}, escapechar=\#}
 		{
    			cell *current = L1;
    			if(count(L1) != count(L2))
-   			{
       			return FALSE;
-   			}
    			else
    			{
      			 while(current)
@@ -478,12 +476,10 @@ stringstyle=\color{magenta}, escapechar=\#}
 		
 		list *add_to(list *L, void *element)
 		{
-   			assert(element);
    			cell *current = L;
    			if(is_empty(L))
    			{
       			L = malloc(sizeof(cell));
-      			assert(L);
       			L->next = NULL;
       			L->data = element;
       			return L;
@@ -491,11 +487,8 @@ stringstyle=\color{magenta}, escapechar=\#}
    			else
    			{
       			while(current->next)
-      				{
-         				current = current->next;
-      				}
+         			current = current->next;
       			current->next = malloc(sizeof(cell));
-      			assert(L->next);
       			current = current->next;
       			current->next = NULL;
       			current->data = element;

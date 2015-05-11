@@ -439,8 +439,8 @@ stringstyle=\color{magenta}, escapechar=\#}
 	\begin{lstlisting}[mathescape]	
 	
 		/*
-		* @pre: $L_1 = (e_0,...e_{i-1}), i \geq 0 \wedge L_2 = (a_0,...,a_{j-1}), j\geq0$
-		* @post: $L_3 = L_1 || L_2$
+		* @pre: $\color{blue}L_1 = (e_0,...e_{i-1}), i \geq 0 \wedge L_2 = (a_0,...,a_{j-1}), j\geq0$
+		* @post: $\color{blue}joined\_list = L_1 || L_2$
 		*/
 		
 		list *join(list *L1, list *L2)
@@ -468,4 +468,46 @@ stringstyle=\color{magenta}, escapechar=\#}
 	
 	\end{lstlisting}
 	
+	\subsubsection{add\_to}
+	\begin{lstlisting}[mathescape]
+	
+		*/
+		* @pre: $element = e_k$ $\wedge L = (e_0,...,e_{i-1})$
+		* @post: $L = (e_0,...,e{i-1},e_k)$
+		*/
+		
+		list *add_to(list *L, void *element)
+		{
+   			assert(element);
+   			cell *current = L;
+   			if(is_empty(L))
+   			{
+      			L = malloc(sizeof(cell));
+      			assert(L);
+      			L->next = NULL;
+      			L->data = element;
+      			return L;
+   			}
+   			else
+   			{
+      			while(current->next)
+      				{
+         				current = current->next;
+      				}
+      			current->next = malloc(sizeof(cell));
+      			assert(L->next);
+      			current = current->next;
+      			current->next = NULL;
+      			current->data = element;
+      			return L;
+   			}
+		}	
+		
+	\end{lstlisting}
+	
+	\subsubsection{remove\_from}
+	
+	\begin{lstlisting}[mathescape]
+	
+	\end{lstlisting}
 \end{document}
